@@ -46,6 +46,13 @@ export class DashboardComponent implements OnInit, AfterViewInit {
 
   updateChartOptions(products: Product[]) {
     this.priceChartOption = {
+      tooltip: {
+        trigger: 'item',
+        formatter: (params: any) => {
+          const { name, value } = params;
+          return `${name}<br>Prix: ${value}`;
+        }
+      },
       xAxis: {
         type: 'category',
         data: products.map(item => item.title)
@@ -64,6 +71,13 @@ export class DashboardComponent implements OnInit, AfterViewInit {
     };
 
     this.ratingChartOption = {
+      tooltip: {
+        trigger: 'item',
+        formatter: (params: any) => {
+          const { name, value } = params;
+          return `${name}<br>Note: ${value}`;
+        }
+      },
       xAxis: {
         type: 'category',
         data: products.map(item => item.title)
