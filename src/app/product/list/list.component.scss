@@ -1,0 +1,17 @@
+.card-img-top {
+    height: 200px; /* Ajustez la hauteur selon vos besoins */
+    object-fit: cover; /* Assure que l'image couvre le conteneur sans déformer */
+  }
+
+  .card {
+    border: 1px solid #ddd; /* Couleur de bordure */
+    border-radius: 0.25rem; /* Coins arrondis */
+  }
+
+  .card-title {
+    font-size: 1.25rem; /* Taille du titre */
+  }
+
+  .card-text {
+    font-size: 1rem; /* Taille du texte */
+  }

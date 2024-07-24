@@ -1,0 +1,25 @@
+<div class="d-flex">
+  <div id="sidebar" class="bg-dark text-white d-flex flex-column">
+    <div class="sidebar-heading p-3">
+      <h4>Menu</h4>
+    </div>
+    <div class="list-group list-group-flush flex-grow-1">
+      <a routerLink="/dashboard" class="list-group-item list-group-item-action bg-dark text-white">
+        <i class="fas fa-tachometer-alt"></i> Dashboard
+      </a>
+      <a routerLink="/products/list" class="list-group-item list-group-item-action bg-dark text-white">
+        <i class="fas fa-box-open"></i>  Produit
+      </a>
+    </div>
+    <div class="logout mt-auto p-3">
+      <a href="#" class="list-group-item list-group-item-action bg-dark text-white">
+        <i class="fas fa-sign-out-alt"></i> Logout
+      </a>
+    </div>
+  </div>
+
+  <div id="content" class="flex-grow-1 p-3">
+    <button class="btn btn-primary mb-3 d-md-none" (click)="toggleSidebar()"><i class="fas fa-bars"></i> Toggle Sidebar</button>
+    <router-outlet></router-outlet>
+  </div>
+</div>

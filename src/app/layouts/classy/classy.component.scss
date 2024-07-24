@@ -1,0 +1,50 @@
+#sidebar {
+  height: 100vh; /* Hauteur de la fenêtre */
+  min-width: 250px; /* Largeur minimale */
+  max-width: 250px; /* Largeur maximale */
+  top: 0; /* Aligne en haut de la fenêtre */
+  left: 0; /* Aligne à gauche de la fenêtre */
+  background-color: #343a40; /* Couleur de fond de la sidebar */
+  color: #ffffff; /* Couleur du texte */
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto; /* Permet le défilement vertical si nécessaire */
+}
+
+#sidebar .list-group-item {
+  transition: background 0.2s, color 0.2s;
+}
+
+#sidebar .list-group-item:hover {
+  background: #495057;
+}
+
+#sidebar .list-group-item i {
+  margin-right: 10px;
+}
+
+#content {
+  width: 100%;
+}
+
+.logout {
+  margin-top: auto;
+  border-top: 1px solid #495057;
+}
+
+@media (max-width: 768px) {
+  #sidebar {
+    display: none;
+  }
+
+  #sidebar.active {
+    display: block;
+    position: absolute;
+    z-index: 1000;
+    width: 250px;
+  }
+
+  #sidebar .list-group-item {
+    border: none;
+  }
+}

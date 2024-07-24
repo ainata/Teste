@@ -1,0 +1,11 @@
+<ng-container *ngIf="data$ | async as data">
+  <div class="chart-container">
+    <h2 class="chart-title">Prix des Produits</h2>
+    <echarts #priceChart [options]="priceChartOption" class="chart"></echarts>
+  </div>
+
+  <div class="chart-container">
+    <h2 class="chart-title">Notation des Produits</h2>
+    <echarts #ratingChart [options]="ratingChartOption" class="chart"></echarts>
+  </div>
+</ng-container>
